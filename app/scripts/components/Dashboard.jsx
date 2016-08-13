@@ -15,9 +15,8 @@ class Dashboard extends React.Component {
   }
 
   componentWillMount() {
-    if (this.props.userID) {
-      this.props.dispatchGetUserListings(this.props.userID);
-    }
+      console.log('fuck you')
+      this.props.dispatchGetUserListings();
   }
 
   closeListingHandler(listingID) {

@@ -77,8 +77,8 @@ module.exports = {
     Listing.findAll({
       where: {
         $or: {
-          giverId: userId,
-          takerId: userId,
+          giverId: req.user.id,
+          takerId: req.user.id,
         },
       },
     })

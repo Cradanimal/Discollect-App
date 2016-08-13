@@ -163,10 +163,16 @@ const itemActions = {
     }
   ),
 
-  getUserHistory: (userId) => (
+
+  getUsersListings: () => (
+    // get listings associated with user at userID
     (dispatch) => {
-      const url = `http://localhost:3000/api/getUserHistory?userid=${userId}`;
+      const url = 'http://localhost:3000/api/getUsersListings';
+      const userID = 'fjfjf';
       fetch(url, {
+        method: 'PUT',
+        body: JSON.stringify({ userID }),
+        credentials: 'same-origin',
         headers: {
           'Content-Type': 'application/json',
         },
